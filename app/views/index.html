@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MEAN CRUD</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>	
+</head>
+<body>
+	<!-- Dropdown Structure -->
+	<ul id="dropdown1" class="dropdown-content">
+	  <li><a href="#/viewStudents">STUDENTS</a></li>
+	  <li><a href="#/viewTeachers">TEACHERS</a></li>
+	</ul>
+	<ul id="dropdown2" class="dropdown-content">
+	  <li><a href="#/addStudent">STUDENT</a></li>
+	  <li><a href="#/addTeacher">TEACHER</a></li>
+	</ul>
+	<ul id="dropdown3" class="dropdown-content">
+	  <li><a href="#/updateStudent">STUDENT</a></li>
+	  <li><a href="#/updateTeacher">TEACHER</a></li>
+	</ul>
+	<ul id="dropdown4" class="dropdown-content">
+	  <li><a href="#/deleteStudent">STUDENT</a></li>
+	  <li><a href="#/deleteTeacher">TEACHER</a></li>
+	</ul>	
+	<nav>
+		<div class="nav-wrapper" style="background-color:#5B9279;">
+		  <a href="#" class="brand-logo">&nbsp&nbspMEAN CRUD</a>
+		  <ul id="nav-mobile" class="right hide-on-med-and-down">
+			<li><a class="dropdown-button" href="#!" data-activates="dropdown2">ADD<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="dropdown-button" href="#!" data-activates="dropdown1">VIEW<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="dropdown-button" href="#!" data-activates="dropdown3">UPDATE<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="dropdown-button" href="#!" data-activates="dropdown4">DELETE<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li>&nbsp</li>
+		  </ul>
+		</div>
+	</nav>
+	<main>
+	  <div ng-app="mainApp">
+		<ng-view></ng-view>
+	  </div>
+	</main>
+	<script type="text/javascript" src="/public/js/main.js"></script>
+	<script type="text/javascript" src="/public/js/controllers/AddController.js"></script>
+	<script type="text/javascript" src="/public/js/controllers/DeleteController.js"></script>
+	<script type="text/javascript" src="/public/js/controllers/UpdateController.js"></script>
+	<script type="text/javascript" src="/public/js/controllers/ViewController.js"></script>
+</body>
+</html>

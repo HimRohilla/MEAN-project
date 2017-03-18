@@ -1,0 +1,38 @@
+<div class="row center" ng-app="mainApp" ng-controller="AddController">
+	<div>
+		<h3>ADD STUDENT</h3>			
+	</div>
+	<div class="row container">
+	<form id="addStudentForm" name="addStudentForm" class="col s12">
+	  <div class="row">
+		<div class="input-field col s12">
+		  <input id="name" ng-model="formData.name" type="text" class="validate">
+		  <label for="name">Name</label>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="input-field col s6">
+		  <input id="username" ng-model="formData.username" type="text" class="validate">
+		  <label for="username">Username</label>
+		</div>
+		<div class="input-field col s6">
+		  <input id="password" ng-model="formData.password" type="password" class="validate">
+		  <label for="password">Password</label>
+		</div>		
+	  </div>
+	  <div class="row">
+		<div class="input-field col s6">
+		  <input id="classes" ng-model="formData.class" type="text" class="validate">
+		  <label for="classes">Class</label>
+		</div>
+		<div class="input-field col s6">
+		  <input id="subjects" ng-model="formData.subjects" type="text" class="validate">
+		  <label for="subjects">Subjects(comma(,) seperated)</label>
+		</div>		
+	  </div>	  
+	  <div class="row">
+		<a class="waves-effect waves-light btn" ng-disabled="addStudentForm.$invalid" ng-click="addStudent(formData);">Submit</a>
+	  </div>
+	</form>
+	</div>
+</div>	

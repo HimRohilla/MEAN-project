@@ -1,0 +1,33 @@
+<div class="row center" ng-app="mainApp" ng-controller="UpdateController">
+	<div>
+		<h3>UPDATE TEACHER</h3>			
+	</div>
+	<div class="row container">
+	<form class="col s12">
+	  <div class="row">
+		<div class="input-field col s6">
+		  <input id="username" ng-model="formData.username" type="text" class="validate">
+		  <label for="username">Teacher Username</label>
+		</div>
+		  <div class="col s6">
+			<a class="waves-effect waves-light btn" style="background-color: #575761;" ng-click="getTeacherData(formData);">GET DETAILS</a>
+		  </div>
+	  </div>
+	  <div class="row">
+		<div class="input-field col s12">
+		  <input id="name" ng-model="formData.name" type="text" class="validate">
+		  <label for="name">Name</label>
+		</div>
+	  </div>	  
+	  <div class="row">
+		<div class="input-field col s12">
+		  <input id="classes" ng-model="formData.classes" type="text" class="validate">
+		  <label for="classes">Classes Teaching(comma(,) seperated)</label>
+		</div>
+	  </div>
+	  <div class="row">
+		<a class="waves-effect waves-light btn" ng-click="updateTeacher(formData);">Update Teacher Details</a>
+	  </div>
+	</form>
+	</div>
+</div>	
