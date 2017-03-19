@@ -21,7 +21,11 @@ router.get('/getAllTeachers', function(req, res) {
 		else {
 			finalJSON.success = true;
 			finalJSON.count = teachers.length;
-			finalJSON.teachers = teachers;
+			var arr = [];
+			for (var i = teachers.length - 1; i >= 0; i--) {
+				arr[i] = {classes_taught: teachers[i].classes_taught, name: teachers[i].user_details.name, username: teachers[i].user_details.username};
+			}			
+			finalJSON.teachers = arr;
 			functions.sendResponse(res, finalJSON);
 		}
 	})

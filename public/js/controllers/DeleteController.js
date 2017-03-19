@@ -3,7 +3,6 @@ var mainApp = angular.module('mainApp');
 mainApp.controller('DeleteController', ['$scope', '$http', function($scope, $http) {
 	$scope.formData = {};
 	$scope.getStudentData = function(formData) {
-		$scope.divHide = true;
 		$http({
 			method  : 'GET',
 			url     : '/student/getStudentDetails',
@@ -54,7 +53,6 @@ mainApp.controller('DeleteController', ['$scope', '$http', function($scope, $htt
 	}
 
 	$scope.getTeacherData = function(formData) {
-		$scope.divHide1 = true;
 		$http({
 			method  : 'GET',
 			url     : '/teacher/getTeacherDetails',
